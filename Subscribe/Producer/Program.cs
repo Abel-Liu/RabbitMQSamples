@@ -12,6 +12,8 @@ namespace Producer
     {
         static void Main(string[] args)
         {
+            //fanout类型的exchange类似于广播，可以启动多个Consumer实例接收所有的消息，没有过滤机制
+
             var factory = new ConnectionFactory() { HostName = "localhost" };
 
             using (var connection = factory.CreateConnection())

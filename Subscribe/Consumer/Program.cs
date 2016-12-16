@@ -31,9 +31,7 @@ namespace Consumer
                     Console.WriteLine("Received: " + message);
                 };
 
-                channel.BasicConsume(queue: queueName,
-                                     noAck: true,
-                                     consumer: consumer);
+                channel.BasicConsume(queueName, true, consumer);
 
                 Console.ReadLine();
             }
